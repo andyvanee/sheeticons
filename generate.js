@@ -1,7 +1,7 @@
 import fs from "fs"
 
 const BASE_URL =
-    process.env.BASE_URL || "https://andyvanee.github.io/sheeticons"
+    process.env.BASE_URL || "https://andyvanee.github.io/sheeticons/"
 
 const { icons, preferences } = JSON.parse(
     fs.readFileSync("icomoon/selection.json", { encoding: "utf-8" })
@@ -12,7 +12,7 @@ const { prefix } = preferences.fontPref
 const linkList = icons.map(({ properties }) => {
     const { name } = properties
     const id = name.split(",").shift()
-    const href = `/icomoon/PNG/${id}.png`
+    const href = `icomoon/PNG/${id}.png`
     const embed = `=IMAGE("${BASE_URL}${href}", 4, 12, 12)`
     return `<tr>
         <td><img src="${href}"/></td>
