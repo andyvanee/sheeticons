@@ -1,6 +1,7 @@
 import fs from "fs"
 
-const BASE_URL = process.env.BASE_URL || "https://andyvanee.github.io"
+const BASE_URL =
+    process.env.BASE_URL || "https://andyvanee.github.io/sheeticons"
 
 const { icons, preferences } = JSON.parse(
     fs.readFileSync("icomoon/selection.json", { encoding: "utf-8" })
